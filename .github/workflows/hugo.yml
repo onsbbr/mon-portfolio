@@ -45,9 +45,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
-      - name: Install TailwindCSS CLI
-        run: npm install -g tailwindcss postcss autoprefixer
+      - name: Install Node dependencies
+        run: npm ci
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
